@@ -33,39 +33,29 @@ vercel
 ```
 
 #### Cách 2: Sử dụng GitHub + Vercel Dashboard
-1. **Push code lên GitHub repo cá nhân (chuẩn, không push file nhạy cảm):**
+1. **Push code lên GitHub repo cá nhân (✅ ĐÃ HOÀN THÀNH):**
 
+   Code đã được push thành công lên: https://github.com/Ne4nf/ViNNan_app
+
+   **Nếu cần push lại hoặc update code:**
    ```bash
-   # 1. Xóa remote cũ (nếu có)
-   git remote remove origin
-
-   # 2. Khởi tạo lại repo (nếu chưa có)
-   git init
-
-   # 3. Thêm remote mới
-   # (thay link nếu repo khác)
-   git remote add origin https://github.com/Ne4nf/ViNNan_app.git
-
-   # 4. Đảm bảo branch là main
-   git checkout -B main
-
-   # 5. Kiểm tra file sẽ được add (đảm bảo .gitignore đã loại .env, env/, node_modules, build, ...)
+   # Kiểm tra trạng thái
    git status
 
-   # 6. Add toàn bộ file (trừ file đã ignore)
+   # Add file đã thay đổi
    git add .
 
-   # 7. Commit
-    git commit -m "Initial commit: ViMedical fullstack (FastAPI + React + Vercel deploy)"
+   # Commit
+   git commit -m "Update: mô tả thay đổi"
 
-   # 8. Push lên GitHub (force để đồng bộ branch main)
-   git push -u origin main --force
+   # Push lên GitHub
+   git push origin main
    ```
 
    > **Lưu ý:**
-   > - Không push file `.env` hoặc thông tin nhạy cảm.
-   > - Kiểm tra `.gitignore` đã loại trừ các file/folder nhạy cảm.
-   > - Sau khi push, reload GitHub repo để kiểm tra code đã lên đầy đủ.
+   > - File `.gitignore` đã được cấu hình để loại trừ file lớn (node_modules, venv, build, .env, ...)
+   > - Repo hiện tại chỉ chứa code cần thiết, không có file nhạy cảm.
+   > - Để cập nhật code, chỉ cần add -> commit -> push như bình thường.
 
 2. **Connect với Vercel:**
    - Vào [vercel.com](https://vercel.com)
